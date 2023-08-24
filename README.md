@@ -1,5 +1,7 @@
 # Svelte + Vite
 
+This is a change from remote done by other developer
+
 This template should help get you started developing with Svelte in Vite.
 
 ## Recommended IDE Setup
