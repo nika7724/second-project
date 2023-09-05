@@ -10,8 +10,3 @@
     <DogInfo id={params.id} />
   </Route>
 </Router>
-
-<!-- <Router>
-  <Route path="/" component={Dogs} />
-  <Route path="/dog/:id" component={DogInfo} />
-</Router> -->
