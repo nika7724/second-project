@@ -2,11 +2,6 @@
   import { store } from "./store.js";
   export let id;
 
-  // Get list of dogs from store and
-  // Get the dog from that array based on id I get from the route
-  // Store the dog object to a local variable
-  // Dispay the variable in the template
-
   function showDog(arr, id) {
     for (let i = 0; i < arr.length; i++) {
       if (arr[i].id == id) {
@@ -17,7 +12,6 @@
 
   //need to find the correct dog based on the passed ID
   let dogInfo = showDog($store.dogs, id);
-  console.log(dogInfo);
 </script>
 
 <section class="blockDetails">

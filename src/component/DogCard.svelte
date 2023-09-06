@@ -1,14 +1,17 @@
 <script>
   export let dog;
+  import { navigate } from "svelte-routing";
+
+  const handleClick = () => {
+    navigate(`/dog/${dog.id}`);
+  };
 </script>
 
 <div class="container">
   <p><img src={dog.imageUrl} alt={dog.name} /></p>
   <p>Race Name:{dog.name}</p>
   <p>Lives:{dog.age} years</p>
-  <button class="btn" onclick="window.location.href='/dog/{dog.id}'"
-    >Show More</button
-  >
+  <button class="btn" on:click={handleClick}>Show More</button>
 </div>
 
 <style>
