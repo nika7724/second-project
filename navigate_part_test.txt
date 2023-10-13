@@ -1,0 +1,31 @@
+<script>
+  export let dog;
+  import { navigate } from "svelte-routing";
+
+  const handleClick = () => {
+    const a = `/dog/${dog.id}`;
+    console.log("h");
+    navigate(a);
+  };
+
+
+ const handleClick = () => {
+   navigate(`/dog/${dog.id}`);
+  };
+
+
+<script>
+  export let dog;
+  import { navigate } from "svelte-routing";
+
+  const handleClick = () => {
+    const a = `/dog/${dog.id}`;
+
+    const b = 5 + 5;
+    const c = 5 + 5;
+    const d = 5 + 5;
+    const r = 6 + 5;
+    console.log("h");
+    navigate(a);
+  };
+</script>

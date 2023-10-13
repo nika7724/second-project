@@ -1,0 +1,49 @@
+function getObjectById(arr,objectId) {
+    // return the object from the array with the corresponding objectId
+    for(let i=0; i<arr.length; i++) {
+        //console.log(i)
+        //console.log(arr[i].id)
+        
+        if (arr[i].id === objectId) {
+            return arr[i]
+        }
+        // if the currect object id is equal to objectId we are looking for then return that object
+        
+      
+    }
+}
+
+
+const testArray = [
+        {
+            id:1
+        },
+        {
+            id:2
+        },
+        {
+            id:3
+        },
+        {
+            id:4
+        },
+        {
+            id:5
+        }
+    ]
+    
+const res1 =  getObjectById(testArray,1)
+const res2 =  getObjectById(testArray,2)
+const res3 =  getObjectById(testArray,3)
+const res4 =  getObjectById(testArray,4)
+const res5 =  getObjectById(testArray,5)
+
+
+console.log(res1) // {id:1}
+ console.log(res2) // {id:2}
+ console.log(res3) // {id:3}
+console.log(res4) // {id:4}
+console.log(res5) // {id:5}
+
+
+

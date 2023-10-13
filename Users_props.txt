@@ -1,0 +1,100 @@
+--------Users------------
+<script>
+  import User from "./User.svelte";
+
+  const user = {
+    users: [
+      {
+        id: 1,
+        name: "Kamilla Ness",
+        age: 27,
+        imageUrl:
+          "https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/06154034/Akita-standing-outdoors-in-the-summer.jpg",
+      },
+      {
+        id: 2,
+        name: "Simon Bucko",
+        age: 24,
+        imageUrl:
+          "https://www.akc.org/wp-content/uploads/2017/11/Beagles-standing-in-a-frosty-field-on-a-cold-morning.jpg",
+      },
+      {
+        id: 3,
+        name: "Zaigham Sarfaraz",
+        age: 30,
+        imageUrl:
+          "https://www.akc.org/wp-content/uploads/2017/11/Chow-Chow-On-White-03.jpg",
+      },
+      {
+        id: 4,
+        name: "Andreas Damgaard Pedersen",
+        age: 32,
+        imageUrl:
+          "https://www.akc.org/wp-content/uploads/2017/11/Yorkshire-Terrier-bowing-indoors.jpg",
+      },
+      {
+        id: 5,
+        name: "Karolis Trubila",
+        age: 24,
+        imageUrl:
+          "https://www.akc.org/wp-content/uploads/2017/11/Shiba-Inu-standing-in-profile-outdoors.jpg",
+      },
+    ],
+  };
+</script>
+
+{#each user.users as userItem}
+  <User user={userItem} />;
+  <!-- name="{userItem.name},"
+  age="{userItem.age},"
+  imageUrl={userItem.imageUrl} -->
+{/each}
+
+
+-------User------
+<script>
+  import Profile from "./Profile.svelte";
+  export let user;
+</script>
+
+<Profile {user} />
+
+------Profile-----
+<script>
+  // export let name;
+  // export let age;
+  // export let imageUrl;
+  export let user; //props: in order to get the data 
+</script>
+
+<div class="container">
+  <p><img src={user.imageUrl} alt={user.name} /></p>
+  <p>Name:{user.name}</p>
+  <p>Age:{user.age}</p>
+</div>
+
+<style>
+  div.container {
+    width: 300px;
+    height: 265px;
+    margin: 1rem;
+    padding: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  }
+  img {
+    width: 250px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 4px;
+  }
+</style>
+
+
+------------App------------
+<script>
+  import Users from "./component/Users.svelte";
+</script>
+
+<Users />
+
+
